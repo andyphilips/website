@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Member Only"
-AuthUserFile /home/chroot/toaster/a/p/aphilips/public_html/courses/bootcamp/.htpasswd
-require valid-user
