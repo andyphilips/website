@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Member Only"
+AuthUserFile /home/chroot/toaster/a/p/aphilips/public_html/courses/globalizationdemocracy/.htpasswd
+require valid-user
