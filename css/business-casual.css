@@ -5,7 +5,7 @@
  */
 
 body {
-    /*font-family: "Quicksand" "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    /*font-family: "Quicksand" "Open Sans",Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;*/
 	font-family: 'Source Sans Pro', sans-serif;
     background: url('http://www.andyphilips.com/img/arabic.png') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -94,10 +94,10 @@ hr {
 }
 
 .box {
-    margin-bottom: 20px;
-    padding: 30px 15px;
+    margin-bottom: 40px;
+    padding: 30px 25px;
     background: #fff;
-    background: rgba(255,255,255,0.98);
+    background: rgba(255,255,255,0.95);
 }
 
 .intro-text {
