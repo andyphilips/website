@@ -41,6 +41,10 @@ a	{
 	font-weight: 500;
 }
 
+a[href] {
+	color: #2874a6;
+}
+
 hr {
     max-width: 400px;
     border-color: #999999;
@@ -51,6 +55,16 @@ hr {
 	line-height: 1.2;
 	color: #000;
 	font-weight: 400;
+}
+
+.btn-default {
+	background-color: #5dade2;
+	border-color: #2874a6;
+}
+
+.btn-default:hover {
+	background-color: #2874a6;
+	border-color: #1b4f72;
 }
 
 .brand {
