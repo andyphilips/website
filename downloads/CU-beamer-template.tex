@@ -1,0 +1,76 @@
+\documentclass[mathserif,ignorenonframetext]{beamer}
+
+\usetheme{CambridgeUS}
+
+\usepackage{color}
+\usepackage{beamerthemesplit}
+\usepackage{setspace}
+\usepackage{comment}
+\usepackage{endnotes}
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{mathptmx}
+\usepackage{bm}
+\usepackage[orientation=landscape,size=custom,width=16,height=9.75,scale=0.5,debug]{beamerposter}
+\setbeamertemplate{caption}{\insertcaption}
+\setbeamertemplate{navigation symbols}{} %no nav symbols
+
+
+% ------------------------------------------
+% Define CU colors:
+\definecolor{cugold}{RGB}{207,184,124}
+\definecolor{cublack}{RGB}{0,0,0}
+\definecolor{cudkgray}{RGB}{86,90,92}
+\definecolor{cultgray}{RGB}{162,164,163}
+
+\setbeamercolor*{structure}{bg=cublack, fg=cugold}
+\setbeamercolor*{palette primary}{use=structure,fg=cudkgray,bg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=black}
+\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+\setbeamercolor{section in toc}{fg=black,bg=white}
+\setbeamercolor{alerted text}{use=structure,fg=structure.fg!50!black!80!black}
+\setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!black}
+\setbeamercolor{frametitle}{bg=white,fg=cublack}
+\setbeamercolor*{titlelike}{parent=palette primary}
+% ------------------------------------------
+
+
+
+\title[CU Boulder]{\textcolor{black}{Title Here}}
+\author[\copyright\ Last Name 2017]{
+Your Name Here\\ \bigskip 
+{\small University of Colorado Boulder} } 
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+
+
+
+% ------------------------------------------
+\begin{frame}\frametitle{Frame title}
+
+\begin{itemize}\setlength\itemsep{1em}
+\item Here's an item\pause
+\item Here's another
+\end{itemize}	
+\end{frame}
+
+
+
+% ------------------------------------------
+%\begin{frame}%\frametitle{Figure}
+%	\begin{center}
+%	\begin{figure}[htbp]
+%		\includegraphics[width = .65\linewidth]{figurehere}
+%	\end{figure}
+%	\end{center}
+%\end{frame}
+
+
+
+
+\end{document}
