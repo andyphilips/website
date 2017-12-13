@@ -6,7 +6,7 @@
 
 body {
     /*font-family: "Quicksand" "Open Sans",Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;*/
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Gill Sans', sans-serif;
     background: url('http://www.andyphilips.com/img/arabic.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -22,33 +22,43 @@ h5,
 h6 {
     text-transform: uppercase;
     /*font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif; */
-	font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
+	font-family: 'Arial', sans-serif;
+    /*font-weight: bold;*/
+	font-weight: 500;
     letter-spacing: 1px;
+	color: Ivory;
 }
 
 p {
     font-size: 1.25em;
     line-height: 1.6;
-    color: #000;
+    color: Ivory; /*#000*/
 	font-weight: 500;
 }
 
 a	{
 	font-size: 1.15em;
 	line-height: 1.6;
-	color: #3333CC;
+	color: #3333CC; 
 	font-weight: 500;
 }
 
 a[href] {
-	color: #2874a6;
-	font-size: 1.05em;
+	color: Bisque; /*#2874a6*/
+	font-size: 1em;
+	font-weight: 500;
+	font-family: 'Gill Sans', sans-serif;
 }
 
 hr {
     max-width: 400px;
     border-color: #999999;
+}
+
+li {
+	color: Ivory;
+	font-size: 1.25em;
+	font-weight: 500;
 }
 
 .small-para	{
@@ -61,11 +71,18 @@ hr {
 .btn-default {
 	background-color: #5dade2;
 	border-color: #2874a6;
+	color: White;
+    text-transform: lowercase;	
 }
 
 .btn-default:hover {
 	background-color: #2874a6;
-	border-color: #1b4f72;
+	border-color: Black;
+	color: Grey;
+}
+
+.collapse {
+	color: Ivory;
 }
 
 .brand {
@@ -79,8 +96,8 @@ hr {
 }
 
 .navbar-nav {
-    text-transform: uppercase;
-    font-weight: 400;
+    /*text-transform: uppercase;*/
+    font-weight: 500;
     letter-spacing: 3px;
 }
 
@@ -112,11 +129,11 @@ hr {
     margin-bottom: 40px;
     padding: 30px 25px;
     background: #fff;
-    background: rgba(255,255,255,0.95);
+    background: rgba(113,119,130,0.95); /*rgba(255,255,255,0.95)*/
 }
 
 .intro-text {
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 1.25em;
     font-weight: 400;
     letter-spacing: 1px;
@@ -134,8 +151,7 @@ hr {
 }
 
 footer {
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(113,119,130,0.95); /*rgba(255,255,255,0.9)*/
 }
 
 footer p {
@@ -194,7 +210,7 @@ footer p {
     .navbar-default {
         border: none;
         background: #fff;
-        background: rgba(255,255,255,0.9);
+        background: #ccc976; /*rgba(255,255,255,0.9)*/
     }
 
     .nav>li>a {
