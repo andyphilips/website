@@ -68,10 +68,10 @@ li {
 	font-weight: 400;
 }
 
-.btn-default {
+.btn-default {  /* Define buttons */
 	background-color: #5dade2;
 	border-color: #2874a6;
-	color: White;
+	color: Black;
     text-transform: lowercase;	
 }
 
@@ -207,7 +207,7 @@ footer p {
         min-height: 0;
     }
 
-    .navbar-default {
+    .navbar-default {  /* colors for navbar */
         border: none;
         background: #fff;
         background: #ccc976; /*rgba(255,255,255,0.9)*/
