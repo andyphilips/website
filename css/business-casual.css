@@ -128,8 +128,7 @@ li {
 .box {
     margin-bottom: 40px;
     padding: 30px 25px;
-    background: #fff;
-    background: #efefef; /*rgba(255,255,255,0.95)*/
+    background: #D3D3D3; /*rgba(255,255,255,0.95)*/
 }
 
 .intro-text {
