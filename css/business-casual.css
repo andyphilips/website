@@ -129,6 +129,7 @@ li {
     margin-bottom: 40px;
     padding: 30px 25px;
     background: #D3D3D3; /*rgba(255,255,255,0.95)*/
+    box-shadow: 5px 10px 20px; /* #ccc976 */
 }
 
 .intro-text {
@@ -210,6 +211,7 @@ footer p {
         border: none;
         background: #fff;
         background: #ccc976; /*rgba(255,255,255,0.9)*/
+        box-shadow: 5px 10px 18px;
     }
 
     .nav>li>a {
