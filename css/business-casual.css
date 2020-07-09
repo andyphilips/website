@@ -7,7 +7,7 @@
 body {
     /*font-family: "Quicksand" "Open Sans",Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;*/
 	font-family: 'Gill Sans', sans-serif;
-    background: Ivory /*url('http://www.andyphilips.com/img/arabic.png') no-repeat center center fixed;*/
+    background: url('http://www.andyphilips.com/img/website-collage.png') no-repeat center center fixed; /*Ivory /*url('http://www.andyphilips.com/img/arabic.png') no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
