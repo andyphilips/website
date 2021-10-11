@@ -38,15 +38,15 @@ function weighted_randomize($prob_array, $at_key)
 }
                     
 
-$featurearray = array("gender" => array("male","female"),"race" => array("white","black","hispanic"),"employed" => array("yes","no"),"on unemployment?" => array("yes","no"));
+$featurearray = array("gender" => array("male","female"),"color" => array("red","green","blue"));
 
-$restrictionarray = array(array(array("employed","yes"),array("on unemployment?","no")));
+$restrictionarray = array();
 
 // Indicator for whether weighted randomization should be enabled or not
 $weighted = 0;
 
 // K = Number of tasks displayed to the respondent
-$K = 10;
+$K = 5;
 
 // N = Number of profiles displayed in each task
 $N = 2;
@@ -55,7 +55,7 @@ $N = 2;
 $num_attributes = count($featurearray);
 
 
-$attrconstraintarray = array(array("gender","race"));
+$attrconstraintarray = array();
 
 
 // Re-randomize the $featurearray
