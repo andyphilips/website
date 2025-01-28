@@ -1,288 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Keep your existing head content -->
     <title>Andrew Q. Philips</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900|Playfair+Display:400,700,900 " rel="stylesheet">
+    <!-- Keep your existing CSS links -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- CSS b/c my menu hamburger button kept breaking -->
+    <style>
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background: white;
+        z-index: 1000;
+        padding: 20px;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+      }
+      
+      .mobile-menu.active {
+        display: block;
+      }
+      
+      .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      
+      .mobile-menu li {
+        margin: 15px 0;
+      }
+      
+      .mobile-menu a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        padding: 5px 0;
+      }
+      
+      .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+      }
+      
+      .menu-overlay.active {
+        display: block;
+      }
+      
+      .mobile-menu-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      
+      @media (min-width: 1200px) {
+        .mobile-menu-toggle {
+          display: none;
+        }
+      }
+    </style>
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-   
+  <body>
+    <!-- Add this for the menu overlay -->
+    <div class="menu-overlay"></div>
     
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-
-      <div class="container">
-        <div class="row align-items-center">
-          
-          <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo m-0 p-0"><a href="index.html" class="mb-0">Andrew Q. Philips</a></h1>
-          </div>
-
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">home</a></li>
-                <li><a href="#about-section" class="nav-link">about</a></li>
-                <li><a href="#publications-section" class="nav-link">publications</a></li>
-				<li><a href="https://andyphilips.github.io/LPW-politicsofbudgets/" class="nav-link">books</a></li>
-                <li><a href="#software-section" class="nav-link">software</a></li>
-                 <li><a href="#courses-section" class="nav-link">courses</a></li>
-                <li><a href="#contact-section" class="nav-link">contact</a></li>
-                <li><a href="AQP_CV.pdf" class="nav-link">cv</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
-        </div>
-      </div>    
-    </header>
-  
-    <div class="site-blocks-cover overlay" style="background-image: url(images/IMG_0652.jpeg);" data-aos="fade" id="home-section">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-md-6 mt-lg-5 text-center">
-            <h1>Andrew Q. Philips</h1>
-          </div>
-        </div>
-      </div>
-    </div>  
-
-    <section class="site-section" id="about-section">
-      <div class="container">
-        
-        <div class="row">
-          <div class="col-lg-6">
-
-            <div class="owl-carousel slide-one-item-alt">
-              <img src="images/Andrew_Philips.jpeg" alt="Image" class="img-fluid"> 
-              <!-- <img src="images/51078378_1114947122000221_5691929155898179584_n.jpg" alt="Image" class="img-fluid">
-              <img src="images/mypic.jpg" alt="Image" class="img-fluid">
-              <img src="images/51045091_1116283125199954_7162139273552986112_n.jpg" alt="Image" class="img-fluid">
-              <img src="images/IMG_432FD1B9F8B8-1.jpeg" alt="Image" class="img-fluid">
-				  -->
-            </div> 
-
-            <!-- <div class="custom-direction">
-              <a href="#" class="custom-prev">Prev</a><a href="#" class="custom-next">Next</a>
-            </div> 
-			-->
-          </div>
-		  
-		  
-          <div class="col-lg-5 ml-auto">
-            <h2 class="section-title mb-3">about</h2>
-                <p class="lead">Welcome! I am an Associate Professor and the Henry W. Ehrmann Professor in Law and Jurisprudence in the <a href="https://www.colorado.edu/polisci/">Department of Political Science</a> at the University of Colorado Boulder. I'm also a fellow at CU's <a href="https://ibs.colorado.edu/">Institute of Behavioral Science</a>. I specialize in political economy and methodology. On this website you can find my <a href="AQP_CV.pdf">CV</a>, links to my work, software for both Stata and R, and course syllabi. You can also <a href="#contact-section">contact me</a> or check out my <a href="https://scholar.google.com/citations?user=kikAMVUAAAAJ&hl=en&oi=ao">Google Scholar</a> or <a href="https://github.com/andyphilips">Github</a> page.</p>
-				<p class="lead">My current research interests include:</p>
-                <ul>
-                  <li>A book on pooling data across both space and time</li>
-                  <li>How domestic and international economic, political and institutional factors affect the composition of government expenditures, as well as other budgetary components (c.f., my recent <i>Cambridge University Press</i> <a href="https://andyphilips.github.io/LPW-politicsofbudgets/">book</a>)</li>
-                  <li>How changes in the representation of women politicians shape certain outcomes, such as government spending and the electability of other women</li>
-                  <li>How to better specify, model and interpret a host of dynamic models, such as ARCH/GARCH, ARDL, and models using compositional data</li>
-                  <li>Various dabbling in machine learning, the effect of elite speech and government policies on financial markets, text and images as data, opportunistic political spending, and political science pedagogy</li>
-                </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="site-section" id="publications-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">recent publications</h2>     
-          </div>
-          <ul> 
-			  <li><a href="https://doi.org/10.1086/726932">Does job insecurity shape policy preferences? An experimental manipulation of labor market risk. </a>Compton and Philips (2024). <i>The Journal of Politics</i>.</li>
-             <li><a href="https://doi.org/10.1086/726934">How do we know what we know? Learning from Monte Carlo simulations. </a>Hopkins et al (2024). <i>The Journal of Politics</i>.</li>  
-            <li><a href="https://doi.org/10.1017/S1049096523000446">Synthesize this: Meta-analysis as a dissertation tool. </a>Jackson and Philips (2023). <i>PS: Political Science & Politics</i>.</li>
-			<li><a href="https://doi.org/10.1177/10659129221108697">A moveable benefit? Spillover efffects of quotas on women's numerical representation. </a>Kaur and Philips (2023). <i>Political Research Quarterly</i>.</li>
-			<li><a href="https://doi.org/10.1111/lsq.12378">How to cautiously uncover the ‘black box’ of machine learning models for legislative scholars. </a>Jordan et al (2023). <i>Legislative Studies Quarterly</i>.</li>			
-			<li><a href="https://doi.org/10.1177/14789299211068418">Improving the interpretation of random effects regression results. </a>Jordan and Philips (2023). <i>Political Studies Review</i>.</li>			
-						
-            <br>  
-            <p class="lead">Click the link below to see all publications, access ungated versions and replication files.</p>
-            <p><a href=publications.html class="btn btn-primary mr-2 mb-2">All Publications</a></p>     
-        </ul>
-        </div>
-      </div>
-    </section>
-
-    
-    <div class="site-section" id="software-section">
-      <div class="container">
-        <div class="row mb-5 align-items-center">
-          <div class="col-md-7 text-left">
-            <h2 class="section-title mb-3">software</h2>
-          </div>
-          
-
-         <div class="row">
-          
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="team-member">
-              <div class="p-3">
-                <h3 class="mb-2">mkduration</h3>
-                <span class="position">Create duration variable with binary cross-sectional time series data (Stata)</span>
-                <ul>
-                  <li><a href="https://github.com/andyphilips/mkduration">Website</a></li>
-                  <li><a href="https://journals.sagepub.com/doi/10.1177/1536867X20976322">Stata Journal article</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="team-member">
-              <div class="p-3">
-                <h3 class="mb-2">dynsimpie</h3>
-                <span class="position">Model dynamic compositional dependent variables (Stata)</span>
-                <ul>
-                  <li><a href="http://andyphilips.github.io/dynsimpie/">Website</a> (old version)</li>
-                  <li><a href="http://www.stata-journal.com/sjpdf.html?articlenum=st0448">Stata Journal article</a> (old version)</li>
-                  <li><a href="https://doi.org/10.1177%2F1536867X20953570">Stata Journal article</a> (new version)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="team-member">
-              <div class="p-3">
-                <h3 class="mb-2">dynamac</h3>
-                <span class="position">Dynamic simulation and testing of single-equation autoregressive distributed lag models (R/Stata)</span>
-                <ul>
-                  <li><a href="http://andyphilips.github.io/dynamac/">Website</a></li>
-                  <li><a href="https://www.stata-journal.com/article.html?article=st0545">Stata Journal article</a></li>
-                  <li><a href="https://journal.r-project.org/archive/2018/RJ-2018-076/index.html">R Journal article</a></li>
-                  <li><a href="https://doi.org/10.21105/joss.02528">JOSS article</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-		  
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="team-member">
-              <div class="p-3">
-                <h3 class="mb-2">qdmean</h3>
-                <span class="position">Automatically quasi-demean regressors following FGLS-RE or MLE-RE regression (R/Stata)</span>
-                <ul>
-                  <li><a href="https://github.com/andyphilips/qdmean">Website</a></li>
-                  <li><a href="https://doi.org/10.1177/14789299211068418">Political Studies Review article</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
+    <!-- Add this for the mobile menu -->
+    <div class="mobile-menu">
+      <span class="mobile-menu-close">&times;</span>
+      <ul>
+        <li><a href="#home-section">home</a></li>
+        <li><a href="#about-section">about</a></li>
+        <li><a href="#publications-section">publications</a></li>
+        <li><a href="https://andyphilips.github.io/LPW-politicsofbudgets/">books</a></li>
+        <li><a href="#software-section">software</a></li>
+        <li><a href="#courses-section">courses</a></li>
+        <li><a href="#contact-section">contact</a></li>
+        <li><a href="AQP_CV.pdf">cv</a></li>
+      </ul>
     </div>
 
-
-    <section class="site-section" id="courses-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">courses</h2>     
-          </div>
-          <div class="col-12 text-center">
-            <p class="lead">University of Colorado Boulder</p>
-          </div>
-          <hr>
-          <ul>
-            <li>PSCI 7108: Time Series and Pooled Time Series. <a href="courses/TS and PTS syllabus.pdf">Syllabus</a></li>
-            <li>PSCI 7095: Advanced Political Data Analysis. <a href="courses/Data2-syllabus.pdf">Syllabus</a></li>
-            <li>PSCI 7155: Maximum Likelihood. <a href="courses/MLE syllabus.pdf">Syllabus</a></li> 
-            <li>PSCI 3075: Applied Political Science Research <a href="courses/PSCI-3075-Philips.pdf">Syllabus</a></li>
-            <li>PSCI 3105: Designing Social Inquiry. <a href="courses/PSCI-3105-Philips.pdf">Syllabus</a></li>
-            <li>PSCI 2075: Quantitative Research Methods. <a href="courses/PSCI 2075 syllabus.pdf">Syllabus</a></li>
-            <li>Summer Workshop in Political Methodology: Cross-Sectional Time Series. <a href="courses/CUSWPM-CSTS-syllabus.pdf">Syllabus</a></li>
-            <li>Summer Workshop in Political Methodology: Machine Learning. <a href="courses/machine_syllabus.pdf">Syllabus</a></li>
-            <li>Interdisciplinary Training in the Social Sciences Quantitative Methods Workshop.</li>
-            <li>Interdisciplinary Training in the Social Sciences Short Course: Modeling Temporal and Spatial Processes in the Social Sciences. <a href="courses/Spatio-temporal analysis syllabus.pdf">Syllabus</a></li>   
-            <li>Graduate Student Introduction to Statistical Programming Software. <a href="courses/programmingcamp_syllabus.pdf">Syllabus</a></li>
-            <br>
-            <div class="col-12 text-center">
-              <p class="lead">Others</p>
-            </div>
-            <li>ICPSR Summer Program in Quantitative Methods of Social Research: Panel Data and Longitudinal Analysis. <a href="courses/PDLA-syllabus.pdf">Syllabus</a></li>
-            <li>ICPSR Summer Program in Quantitative Methods of Social Research: Advanced Topics in Dynamic Panel Models. <a href="courses/ADPD-modeling-syllabus.pdf">Syllabus</a></li>  
-            <li> IPSA-USP Summer School in Concepts, Methods and Techniques in Political Science and International Relations: Advanced Time Series Cross-Section Analyses. <a href="http://summerschool.fflch.usp.br/">Website</a>. <a href="courses/Module_3_of_TS_and_TSCS.pdf">Syllabus</a></li>
-            <li> IPSA-USP Summer School in Concepts, Methods and Techniques in Political Science and International Relations: Modeling Dynamics and Advances in Modeling Dynamics. <a href="http://summerschool.fflch.usp.br/">Website</a></li>
-            <li>Texas A&M, POLS 328-502: Globalization and Democracy. <a href="courses/Globalization and Democracy Syllabus.pdf">Syllabus</a></li>    
-            <li>Texas A&M, Introduction to Statistical and Programming Software. <a href="courses/Bootcamp Syllabus.pdf">Syllabus</a></li>
-            <br>       
-        </ul>
-        </div>
-      </div>
-    </section>
-
-    
-    <section class="site-section" id="contact-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">contact</h2>     
-          </div>
-          <p>Feel free to contact me at andrew[dot]philips[at]colorado[dot]edu. You can also find me on <a href="https://github.com/andyphilips">GitHub</a>.</p>
-        <!-- and on <a href="https://twitter.com/andyphilips_">Twitter (@andyphilips_)</a> -->
-		</div>
-      </div>
-    </section>
-
-
-    <footer class="site-footer">
+    <!-- Keep your existing site-wrap div -->
+    <div class="site-wrap">
+      <!-- Modify your header section -->
+      <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
         <div class="container">
-          <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <p>
-              Copyright &copy; Andrew Q. Philips <script>document.write(new Date().getFullYear());</script>. Made using <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="https://pages.github.com/">gh-pages</a>. Original template from <a href="https://colorlib.com" target="_blank" >Colorlib</a>.
-            </p>
+          <div class="row align-items-center">
+            <div class="col-6 col-xl-2">
+              <h1 class="mb-0 site-logo m-0 p-0"><a href="index.html" class="mb-0">Andrew Q. Philips</a></h1>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                  <li><a href="#home-section" class="nav-link">home</a></li>
+                  <li><a href="#about-section" class="nav-link">about</a></li>
+                  <li><a href="#publications-section" class="nav-link">publications</a></li>
+                  <li><a href="https://andyphilips.github.io/LPW-politicsofbudgets/" class="nav-link">books</a></li>
+                  <li><a href="#software-section" class="nav-link">software</a></li>
+                  <li><a href="#courses-section" class="nav-link">courses</a></li>
+                  <li><a href="#contact-section" class="nav-link">contact</a></li>
+                  <li><a href="AQP_CV.pdf" class="nav-link">cv</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- Mobile menu toggle button -->
+            <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3">
+              <button class="mobile-menu-toggle btn float-right">
+                <span class="icon-menu h3"></span>
+              </button>
             </div>
           </div>
-        </div>
-    </footer>
+        </div>    
+      </header>
+
+     <div class="site-blocks-cover overlay" style="background-image: url(images/IMG_0652.jpeg);" data-aos="fade" id="home-section">
+       <div class="container">
+         <div class="row align-items-center justify-content-center">
+           <div class="col-md-6 mt-lg-5 text-center">
+             <h1>Andrew Q. Philips</h1>
+           </div>
+         </div>
+       </div>
+     </div>  
+
+     <section class="site-section" id="about-section">
+       <div class="container">
+        
+         <div class="row">
+           <div class="col-lg-6">
+             <div class="owl-carousel slide-one-item-alt">
+               <img src="images/Andrew_Philips.jpeg" alt="Image" class="img-fluid"> 
+             </div> 
+           </div>
+		  
+           <div class="col-lg-5 ml-auto">
+             <h2 class="section-title mb-3">about</h2>
+                 <p class="lead">Welcome! I am an Associate Professor and the Henry W. Ehrmann Professor in Law and Jurisprudence in the <a href="https://www.colorado.edu/polisci/">Department of Political Science</a> at the University of Colorado Boulder. I'm also a fellow at CU's <a href="https://ibs.colorado.edu/">Institute of Behavioral Science</a>. I specialize in political economy and methodology. On this website you can find my <a href="AQP_CV.pdf">CV</a>, links to my work, software for both Stata and R, and course syllabi. You can also <a href="#contact-section">contact me</a> or check out my <a href="https://scholar.google.com/citations?user=kikAMVUAAAAJ&hl=en&oi=ao">Google Scholar</a> or <a href="https://github.com/andyphilips">Github</a> page.</p>
+ 				<p class="lead">My current research interests include:</p>
+                 <ul>
+                   <li>A book on pooling data across both space and time</li>
+                   <li>How domestic and international economic, political and institutional factors affect the composition of government expenditures, as well as other budgetary components (c.f., my coauthored 2023 <i>Cambridge University Press</i> <a href="https://andyphilips.github.io/LPW-politicsofbudgets/">book</a>)</li>
+                   <li>How changes in the representation of women politicians shape certain outcomes, such as government spending and the electability of other women</li>
+                   <li>How to better specify, model and interpret a host of dynamic models, such as ARCH/GARCH, ARDL, and models using compositional data</li>
+                   <li>Various dabbling in machine learning, the effect of elite speech and government policies on financial markets, text and images as data, opportunistic political spending, and political science pedagogy</li>
+                 </ul>
+           </div>
+         </div>
+       </div>
+     </section>
 
 
-  </div> <!-- .site-wrap -->
+     <section class="site-section" id="publications-section">
+       <div class="container">
+         <div class="row">
+           <div class="col-12 text-center">
+             <h2 class="section-title mb-3">recent publications</h2>     
+           </div>
+           <ul> 
+ 			  <li><a href="https://doi.org/10.1086/726932">Does job insecurity shape policy preferences? An experimental manipulation of labor market risk. </a>Compton and Philips (2024). <i>The Journal of Politics</i>.</li>
+              <li><a href="https://doi.org/10.1086/726934">How do we know what we know? Learning from Monte Carlo simulations. </a>Hopkins et al (2024). <i>The Journal of Politics</i>.</li>  
+             <li><a href="https://doi.org/10.1017/S1049096523000446">Synthesize this: Meta-analysis as a dissertation tool. </a>Jackson and Philips (2023). <i>PS: Political Science & Politics</i>.</li>
+ 			<li><a href="https://doi.org/10.1177/10659129221108697">A moveable benefit? Spillover efffects of quotas on women's numerical representation. </a>Kaur and Philips (2023). <i>Political Research Quarterly</i>.</li>
+ 			<li><a href="https://doi.org/10.1111/lsq.12378">How to cautiously uncover the ‘black box’ of machine learning models for legislative scholars. </a>Jordan et al (2023). <i>Legislative Studies Quarterly</i>.</li>			
+ 			<li><a href="https://doi.org/10.1177/14789299211068418">Improving the interpretation of random effects regression results. </a>Jordan and Philips (2023). <i>Political Studies Review</i>.</li>			
+						
+             <br>  
+             <p class="lead">Click the link below to see all publications, access ungated versions and replication files.</p>
+             <p><a href=publications.html class="btn btn-primary mr-2 mb-2">All Publications</a></p>     
+         </ul>
+         </div>
+       </div>
+     </section>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-
-  
-  <script src="js/main.js"></script>
     
+     <div class="site-section" id="software-section">
+       <div class="container">
+         <div class="row mb-5 align-items-center">
+           <div class="col-md-7 text-left">
+             <h2 class="section-title mb-3">software</h2>
+           </div>
+          
+
+          <div class="row">
+          
+           <div class="col-md-6 col-lg-4 mb-4">
+             <div class="team-member">
+               <div class="p-3">
+                 <h3 class="mb-2">mkduration</h3>
+                 <span class="position">Create duration variable with binary cross-sectional time series data (Stata)</span>
+                 <ul>
+                   <li><a href="https://github.com/andyphilips/mkduration">Website</a></li>
+                   <li><a href="https://journals.sagepub.com/doi/10.1177/1536867X20976322">Stata Journal article</a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-md-6 col-lg-4 mb-4">
+             <div class="team-member">
+               <div class="p-3">
+                 <h3 class="mb-2">dynsimpie</h3>
+                 <span class="position">Model dynamic compositional dependent variables (Stata)</span>
+                 <ul>
+                   <li><a href="http://andyphilips.github.io/dynsimpie/">Website</a> (old version)</li>
+                   <li><a href="http://www.stata-journal.com/sjpdf.html?articlenum=st0448">Stata Journal article</a> (old version)</li>
+                   <li><a href="https://doi.org/10.1177%2F1536867X20953570">Stata Journal article</a> (new version)</li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-md-6 col-lg-4 mb-4">
+             <div class="team-member">
+               <div class="p-3">
+                 <h3 class="mb-2">dynamac</h3>
+                 <span class="position">Dynamic simulation and testing of single-equation autoregressive distributed lag models (R/Stata)</span>
+                 <ul>
+                   <li><a href="http://andyphilips.github.io/dynamac/">Website</a></li>
+                   <li><a href="https://www.stata-journal.com/article.html?article=st0545">Stata Journal article</a></li>
+                   <li><a href="https://journal.r-project.org/archive/2018/RJ-2018-076/index.html">R Journal article</a></li>
+                   <li><a href="https://doi.org/10.21105/joss.02528">JOSS article</a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+		  
+           <div class="col-md-6 col-lg-4 mb-4">
+             <div class="team-member">
+               <div class="p-3">
+                 <h3 class="mb-2">qdmean</h3>
+                 <span class="position">Automatically quasi-demean regressors following FGLS-RE or MLE-RE regression (R/Stata)</span>
+                 <ul>
+                   <li><a href="https://github.com/andyphilips/qdmean">Website</a></li>
+                   <li><a href="https://doi.org/10.1177/14789299211068418">Political Studies Review article</a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+
+         </div>
+       </div>
+     </div>
+
+
+     <section class="site-section" id="courses-section">
+       <div class="container">
+         <div class="row">
+           <div class="col-12 text-center">
+             <h2 class="section-title mb-3">courses</h2>     
+           </div>
+           <div class="col-12 text-center">
+             <p class="lead">University of Colorado Boulder</p>
+           </div>
+           <hr>
+           <ul>
+             <li>PSCI 7108: Time Series and Pooled Time Series. <a href="courses/TS and PTS syllabus.pdf">Syllabus</a></li>
+             <li>PSCI 7095: Advanced Political Data Analysis. <a href="courses/Data2-syllabus.pdf">Syllabus</a></li>
+             <li>PSCI 7155: Maximum Likelihood. <a href="courses/MLE syllabus.pdf">Syllabus</a></li> 
+             <li>PSCI 3075: Applied Political Science Research <a href="courses/PSCI-3075-Philips.pdf">Syllabus</a></li>
+             <li>PSCI 3105: Designing Social Inquiry. <a href="courses/PSCI-3105-Philips.pdf">Syllabus</a></li>
+             <li>PSCI 2075: Quantitative Research Methods. <a href="courses/PSCI 2075 syllabus.pdf">Syllabus</a></li>
+             <li>Summer Workshop in Political Methodology: Cross-Sectional Time Series. <a href="courses/CUSWPM-CSTS-syllabus.pdf">Syllabus</a></li>
+             <li>Summer Workshop in Political Methodology: Machine Learning. <a href="courses/machine_syllabus.pdf">Syllabus</a></li>
+             <li>Interdisciplinary Training in the Social Sciences Quantitative Methods Workshop.</li>
+             <li>Interdisciplinary Training in the Social Sciences Short Course: Modeling Temporal and Spatial Processes in the Social Sciences. <a href="courses/Spatio-temporal analysis syllabus.pdf">Syllabus</a></li>   
+             <li>Graduate Student Introduction to Statistical Programming Software. <a href="courses/programmingcamp_syllabus.pdf">Syllabus</a></li>
+             <br>
+             <div class="col-12 text-center">
+               <p class="lead">Others</p>
+             </div>
+             <li>ICPSR Summer Program in Quantitative Methods of Social Research: Panel Data and Longitudinal Analysis. <a href="courses/PDLA-syllabus.pdf">Syllabus</a></li>
+             <li>ICPSR Summer Program in Quantitative Methods of Social Research: Advanced Topics in Dynamic Panel Models. <a href="courses/ADPD-modeling-syllabus.pdf">Syllabus</a></li>  
+             <li> IPSA-USP Summer School in Concepts, Methods and Techniques in Political Science and International Relations: Advanced Time Series Cross-Section Analyses. <a href="http://summerschool.fflch.usp.br/">Website</a>. <a href="courses/Module_3_of_TS_and_TSCS.pdf">Syllabus</a></li>
+             <li> IPSA-USP Summer School in Concepts, Methods and Techniques in Political Science and International Relations: Modeling Dynamics and Advances in Modeling Dynamics. <a href="http://summerschool.fflch.usp.br/">Website</a></li>
+             <li>Texas A&M, POLS 328-502: Globalization and Democracy. <a href="courses/Globalization and Democracy Syllabus.pdf">Syllabus</a></li>    
+             <li>Texas A&M, Introduction to Statistical and Programming Software. <a href="courses/Bootcamp Syllabus.pdf">Syllabus</a></li>
+             <br>       
+         </ul>
+         </div>
+       </div>
+     </section>
+
+    
+     <section class="site-section" id="contact-section">
+       <div class="container">
+         <div class="row">
+           <div class="col-12 text-center">
+             <h2 class="section-title mb-3">contact</h2>     
+           </div>
+           <p>Feel free to contact me at andrew[dot]philips[at]colorado[dot]edu. You can also find me on <a href="https://github.com/andyphilips">GitHub</a>.</p>
+ 		</div>
+       </div>
+     </section>
+
+
+     <footer class="site-footer">
+         <div class="container">
+           <div class="row pt-5 mt-5 text-center">
+           <div class="col-md-12">
+             <p>
+               Copyright &copy; Andrew Q. Philips <script>document.write(new Date().getFullYear());</script>. Made using <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="https://pages.github.com/">gh-pages</a>. Original template from <a href="https://colorlib.com" target="_blank" >Colorlib</a>.
+             </p>
+             </div>
+           </div>
+         </div>
+     </footer>
+     
+    </div>
+
+    <!-- Script imports -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- New JavaScript [for hamburger button bar] -->
+    <script>
+      $(document).ready(function() {
+        // Open menu
+        $('.mobile-menu-toggle').click(function(e) {
+          e.preventDefault();
+          $('.mobile-menu, .menu-overlay').addClass('active');
+        });
+        
+        // Close menu
+        $('.mobile-menu-close, .menu-overlay, .mobile-menu a').click(function(e) {
+          $('.mobile-menu, .menu-overlay').removeClass('active');
+        });
+        
+        // Prevent menu from closing when clicking inside it
+        $('.mobile-menu').click(function(e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
   </body>
 </html>
